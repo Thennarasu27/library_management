@@ -4,12 +4,9 @@ app_publisher = "Thennarasu M"
 app_description = "To manage library related activites."
 app_email = "thennarasum2705@gmail.com"
 app_license = "mit"
-
 # Apps
 # ------------------
-
 # required_apps = []
-
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{
@@ -20,28 +17,60 @@ app_license = "mit"
 # 		"has_permission": "library_management.api.permission.has_app_permission"
 # 	}
 # ]
-
 # Includes in <head>
 # ------------------
-
 # include js, css files in header of desk.html
-# app_include_css = "/assets/library_management/css/library_management.css"
-# app_include_js = "/assets/library_management/js/library_management.js"
+
+#--------------------------------------------------------------------------------------#
+app_include_css = "/assets/library_management/css/library_management.css"
+app_include_js = "/assets/library_management/js/library_management.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/library_management/css/library_management.css"
-# web_include_js = "/assets/library_management/js/library_management.js"
+web_include_css = "/assets/library_management/css/check.css"
+web_include_js = "/assets/library_management/js/check.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "library_management/public/scss/website"
 
 # include js, css files in header of web form
-# webform_include_js = {"doctype": "public/js/doctype.js"}
-# webform_include_css = {"doctype": "public/css/doctype.css"}
+webform_include_js = {"Employee Management": "public/js/webform.js"}
+webform_include_css = {"Employee Management": "public/css/webform.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
 
+page_js = {"page1" : "public/js/library_management.js"}
+
+#website-hooks
+
+# website_catch_all="404.html"
+# website_path_resolver = "library_management.www.resolver.custom_resolver"
+#get_web_pages_with_dynamic_routes = "script.get_web_pages_with_dynamic_routes" #not working
+#website_clear_cache = "library_management.overrides.clear_website_cache"
+# website_route_rules = [
+#     {   #not working
+#         "from_route": "/Author/<name>",
+#         "to_route": "library_management/Author/Author"
+#     }
+# ]
+# website_redirects=[    #working
+#     {
+#         "source":"/deepak",
+#         "target":"/check"
+#     }
+# ]
+#home_page = "home"
+brand_html = '<div><img src="tennismart.png"> TennisMart</div>'
+base_template="library_management.templates.custom"
+
+
+
+
+
+
+
+ 
+
+#----------------------------------------------------------#
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -57,7 +86,7 @@ app_license = "mit"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+#home_page = "check"
 
 # website user home page (by Role)
 # role_home_page = {
@@ -114,7 +143,7 @@ app_license = "mit"
 # ------------------
 # To hook into the build process
 
-# after_build = "library_management.build.after_build"
+after_build = "library_management.build.after_build"
 
 # Desk Notifications
 # ------------------
@@ -262,12 +291,12 @@ test_dict = {
     "key": "value"
 }
 
-doc_events = {
-    "Employee Management": {
-        "before_save": "library_management.events.before_save",
-        "after_insert": "library_management.events.after_insert"
-    }
-}
+# doc_events = {
+#     "Employee Management": {
+#         "before_save": "library_management.events.before_save",
+#         "after_insert": "library_management.events.after_insert"
+#     }
+# }
 
 # app_include_js = "/assets/library_management/js/app.js"
 # #app_include_css="/assets/library_management/css/app.css"

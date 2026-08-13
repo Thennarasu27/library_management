@@ -22,7 +22,8 @@
   "active",
   "table1",
   "links",
-  "parent1"
+  "parent1",
+  "control"
  ],
  "fields": [
   {
@@ -110,12 +111,17 @@
    "fieldname": "parent1",
    "fieldtype": "HTML",
    "label": "parent"
+  },
+  {
+   "fieldname": "control",
+   "fieldtype": "HTML",
+   "label": "control"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-06 12:13:32.755852",
+ "modified": "2026-08-13 14:02:56.523855",
  "modified_by": "Administrator",
  "module": "Library-Tech",
  "name": "Employee Management",

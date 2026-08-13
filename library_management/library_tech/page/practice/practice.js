@@ -4,6 +4,7 @@ frappe.pages['practice'].on_page_load = function(wrapper) {
 		title: 'None',
 		single_column: true
 	});
+ 
 	page.set_title("Employee Dashboard");
 	page.set_title_sub("Total Employees: 25");
 	page.set_indicator("Active", "blue");
@@ -12,10 +13,9 @@ frappe.pages['practice'].on_page_load = function(wrapper) {
 });
 page.set_secondary_action("Refresh", () => {
     frappe.msgprint("Refreshing");
-});
+}); 
 page.clear_primary_action()
 page.clear_secondary_action()
-
 // page.add_menu_item("Export", () => {
 //     frappe.msgprint("Export");
 // });
@@ -55,3 +55,4 @@ let field = page.add_field({
 page.clear_fields();
 let val = page.get_form_values();
 console.log(val);}
+

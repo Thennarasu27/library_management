@@ -1,0 +1,1 @@
+frappe.msgprint("Page1");

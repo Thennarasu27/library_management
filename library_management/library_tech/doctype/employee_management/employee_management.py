@@ -1,10 +1,8 @@
 # Copyright (c) 2026, Thennarasu M and contributors
 # For license information, please see license.txt
-
 import frappe
 from frappe.model.document import Document
 from frappe.utils import *
-
 # @frappe.whitelist()
 # def utility():
 	#return now();
@@ -154,6 +152,8 @@ class EmployeeManagement(Document):
 	# 	doc=frappe.new_doc("Employee Management");
 	# 	doc.name1="dbdotinsert";
 	# 	doc.db_insert();
+	# frappe.publish_progress(25, title='Some title', description='Some description')
+
 
 
 		

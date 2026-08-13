@@ -1,20 +1,172 @@
-frappe.ui.form.on("Employee Management", {
-    refresh(frm) {
-        frm.add_custom_button("Testing", () => {
-            frappe.call({
-                method:"library_management.library_tech.doctype.employee_management.employee_management.utility2",
-                args:{
-                    'doc':"Employee Management"},
-                callback(r) {
-                    console.log(0);
-                    frappe.msgprint(r.message);
+// frappe.ui.form.on("Employee Management", {
+//     refresh(frm) {
+//         frm.add_custom_button("Testing", () => {
+//             frappe.call({
+//                 method:"library_management.library_tech.doctype.employee_management.employee_management.utility2",
+//                 args:{
+//                     'doc':"Employee Management"},
+//                 callback(r) {
+//                     console.log(0);
+//                     frappe.msgprint(r.message);
+//                 }
+//             });
+
+//         });
+
+//     }
+// });
+// frappe.pages['Employee Management'].on_page_load = function(wrapper) {
+
+    
+
+// };
+
+// controls:
+// frappe.ui.form.on("Employee Management",{
+//     refresh(frm){
+//         frappe.ui.form.make_control({
+//         parent:frm.fields_dict.control.$wrapper,
+//         df: {
+//             label: 'Due Date',
+//             fieldname: 'due_date',
+//             fieldtype: 'Date'
+//         },
+//         render_input: true
+//     });
+//     }
+// })
+
+//common utilities
+// frappe.ui.form.on('Employee Management', {
+//     refresh(frm) {
+//         //console.log("hello")
+//         //console.log("route : "+frappe.get_route());
+//         //frappe.set_route('practice');
+// let result = frappe.format(
+//         50000,
+//         { fieldtype: 'Currency' }
+//         );
+
+//         console.log("result :"+ result);
+
+//     }
+// });
+
+
+// dialog api 
+
+frappe.ui.form.on('Employee Management',{
+    refresh(frm)
+    {
+        
+//             let d = new frappe.ui.Dialog({
+//         title: 'Enter details',
+
+//         fields: [
+//             {
+//                 label: 'First Name',
+//                 fieldname: 'first_name',
+//                 fieldtype: 'Data'
+//             },
+//             {
+//                 label: 'Last Name',
+//                 fieldname: 'last_name',
+//                 fieldtype: 'Data'
+//             },
+//             {
+//                 label: 'Age',
+//                 fieldname: 'age',
+//                 fieldtype: 'Int'
+//             }
+//         ],
+
+//         primary_action_label: 'Submit',
+
+//         primary_action(values) {
+//             console.log(values);
+//             d.hide();
+//         }
+//     });
+
+// d.show();
+        //frappe.throw("Error");
+        // frappe.prompt('name1',({value})=>
+        // {
+        //     console.log(value);
+        // })
+        //frappe.confirm("Proceed?",()=>{console.log("Yes")},()=>{console.log("No")})
+        //frappe.warn('Are you sure you want to proceed?','There are unsaved changes on this page',() => {console.log("Pressed Continue")},'continue',true);
+        // frappe.show_alert({
+        //     message:__('Hi, you have a new message'),
+        //     indicator:'green'
+        // }, 5);
+        // frappe.show_progress('Loading..', 70, 100, 'Please wait');
+        //frappe.confirm("Open New Form?",()=>{frappe.new_doc("Leave")},()=>{console.log("No")})
+        // new frappe.ui.form.MultiSelectDialog({
+        // doctype: "Employee Management",
+        // action(selections) {
+        // console.log(selections);
+        // frm.add_custom_button("Select Employees", () => {
+
+        //     new frappe.ui.form.MultiSelectDialog({  //not working
+        //         doctype: "Employee Management",
+        //         target: frm,
+
+        //         action(selections) {
+        //             console.log("Selected employees:", selections);
+        //         }
+        //     });
+
+        // });
+        // }});
+        //         let d = new frappe.ui.Dialog({
+        //     title: "Project Employees",
+
+        //     fields: [
+        //         {
+        //             fieldname: "table1",
+        //             fieldtype: "Table",
+        //             label: "Employees",
+
+        //             fields: [
+        //                 {
+        //                     fieldname: "name",
+        //                     label: "Name",
+        //                     fieldtype: "Data",
+        //                     in_list_view: 1
+        //                 }
+        //             ]
+        //         }
+        //     ],
+
+        //     primary_action_label: "Submit",
+
+        //     primary_action(values) {
+        //         console.log(values.table1);
+        //         d.hide();
+        //     }
+        // });
+
+        // d.show();
+
+        //scanner API
+        frm.add_custom_button("Scan", () => {
+            new frappe.ui.Scanner({
+                dialog: true,
+                multiple: false,
+                on_scan(data) {
+                    frappe.msgprint(
+                        "Scanned Value: " + data.decodedText
+                    );
                 }
             });
-
         });
-
     }
-});
+
+    //scanner API
+    
+})
+
 // Copyright (c) 2026, Thennarasu M and contributors
 // For license information, please see license.txt 
 // frappe.ui.form.on("Employee Management", {
