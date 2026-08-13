@@ -245,7 +245,7 @@ app_license = "mit"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
+export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
@@ -256,3 +256,29 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+test_string = "value"
+test_list = ["value"]
+test_dict = {
+    "key": "value"
+}
+
+doc_events = {
+    "Employee Management": {
+        "before_save": "library_management.events.before_save",
+        "after_insert": "library_management.events.after_insert"
+    }
+}
+
+# app_include_js = "/assets/library_management/js/app.js"
+# #app_include_css="/assets/library_management/css/app.css"
+# web_include_js = "/assets/library_management/js/portal.js"
+# webform_include_js = {"Employee Management":"public/js/form.js"}
+# webform_include_css={"Employee Management":"public/css/"}
+# page_js = {"employee" : "public/js/page.js"}
+# # sounds = [
+# #     {"name": "ping", "src": "/assets/app/sounds/ping.mp3", "volume": 0.2}
+# #  ]
+
+# before_install = "library_management.setup.install.before_install"
+# after_install = "library_management.setup.install.after_install"
+# after_sync = "library_management.setup.install.after_sync"

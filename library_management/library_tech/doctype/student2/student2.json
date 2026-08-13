@@ -1,0 +1,198 @@
+{
+ "actions": [
+  {
+   "action": "List/Books",
+   "action_type": "Route",
+   "label": "see"
+  }
+ ],
+ "allow_bulk_edit": 1,
+ "allow_guest_to_view": 1,
+ "autoname": "autoincrement",
+ "creation": "2026-07-21 10:41:32.484556",
+ "default_view": "List",
+ "doctype": "DocType",
+ "documentation": "https://leetcode.com/",
+ "engine": "InnoDB",
+ "field_order": [
+  "resume",
+  "photo",
+  "department",
+  "hostle",
+  "currency",
+  "code",
+  "data",
+  "datetime_yheb",
+  "duration_jxxq",
+  "float_cjim",
+  "geolocation_xdbn",
+  "break",
+  "h1helloh1",
+  "icon_vuuu",
+  "preview",
+  "phone_gzjb",
+  "ro",
+  "table_xyhp",
+  "table_multiselect_uaru",
+  "start",
+  "end",
+  "route",
+  "check"
+ ],
+ "fields": [
+  {
+   "fieldname": "resume",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Resume",
+   "reqd": 1,
+   "sticky": 1
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Autocomplete",
+   "label": "Department",
+   "options": "CSE\nIT\nECE\nAIDS\nAIML"
+  },
+  {
+   "default": "0",
+   "fieldname": "hostle",
+   "fieldtype": "Check",
+   "label": "Hostle"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Currency",
+   "label": "Currency"
+  },
+  {
+   "documentation_url": "https://leetcode.com/",
+   "fieldname": "code",
+   "fieldtype": "Code",
+   "label": "Code"
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Data",
+   "label": "Data"
+  },
+  {
+   "fieldname": "datetime_yheb",
+   "fieldtype": "Datetime"
+  },
+  {
+   "fieldname": "duration_jxxq",
+   "fieldtype": "Duration"
+  },
+  {
+   "fieldname": "float_cjim",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "geolocation_xdbn",
+   "fieldtype": "Geolocation"
+  },
+  {
+   "fieldname": "break",
+   "fieldtype": "Heading",
+   "label": "BREAK"
+  },
+  {
+   "fieldname": "h1helloh1",
+   "fieldtype": "HTML",
+   "label": "<h1>hello</h1>"
+  },
+  {
+   "fieldname": "icon_vuuu",
+   "fieldtype": "Icon"
+  },
+  {
+   "fieldname": "preview",
+   "fieldtype": "Image",
+   "label": "Preview",
+   "options": "photo"
+  },
+  {
+   "fieldname": "phone_gzjb",
+   "fieldtype": "Phone"
+  },
+  {
+   "fieldname": "ro",
+   "fieldtype": "Read Only",
+   "label": "ro"
+  },
+  {
+   "fieldname": "table_xyhp",
+   "fieldtype": "Table",
+   "options": "Student_phone"
+  },
+  {
+   "fieldname": "table_multiselect_uaru",
+   "fieldtype": "Table MultiSelect",
+   "options": "Student_phone"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Date",
+   "label": "start"
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Date",
+   "label": "end"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route"
+  },
+  {
+   "default": "0",
+   "fieldname": "check",
+   "fieldtype": "Check",
+   "label": "check"
+  }
+ ],
+ "grid_page_length": 50,
+ "has_web_view": 1,
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_published_field": "check",
+ "links": [],
+ "modified": "2026-07-22 15:58:25.046319",
+ "modified_by": "Administrator",
+ "module": "Library-Tech",
+ "name": "Student2",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "route": "http://127.0.0.1:8000/Student2",
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
