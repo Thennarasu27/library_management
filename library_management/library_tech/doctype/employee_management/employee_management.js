@@ -371,3 +371,75 @@ frappe.ui.form.on('Employee Management',{
 
 //     }
 // });
+
+//form tours
+// frappe.ui.form.on('Employee Management', {
+//     onload(frm) {
+//         const tour_name = 'Custom Field';
+
+//         frm.tour.init({ tour_name }).then(() => {
+//             frm.tour.start();
+//         });
+//     }
+// });
+
+//server calls
+// frappe.ui.form.on("Employee Management", {
+//     refresh(frm) {
+//         frappe.call("library_management.api.func5")
+//             .then(r => {
+//                 frappe.msgprint(r);
+//                 console.log(r);
+//             });
+//     }
+// });
+
+//background jobs 
+        // frappe.call("library_management.api.start_job").then(r=>{
+        //     frappe.msgprint(r);
+        // })
+
+// frappe.ui.form.on("Employee Management",{
+//     refresh(frm){
+//         // frm.add_custom_button("Set Status",()=>{
+//         //     //frm.set_value("name1","Changed")
+//         //     doc.name1="changed"
+//         //     doc.save()
+//         //     frm.refresh_field("name1")
+//         //     frappe.msgprint("Changed")
+//         // })
+//         if(frm.doc.status==="pending")
+//             {
+//                 frm.add_custom_button("Approve",()=>
+//                 {
+//                     frm.set_value('status','approved')
+//                     frm.refresh_field("status");
+//                     frappe.msgprint("Done");
+//                     //frm.remove_custom_button("Approved")
+//                 })
+//             }
+//     }
+// })
+frappe.ui.form.on("Employee Management", {
+    refresh(frm) {
+        let d = new frappe.ui.Dialog({
+            title: "Enter First Name:",
+            fields: [
+                {
+                    label: "Name",
+                    fieldname: "name1",
+                    fieldtype: "Data"
+                }
+            ],
+            primary_action_label:'submit',
+            primary_action(values)
+            {
+                val=values.name1
+                frappe.new_doc('task_assign',{name1:val})
+                d.hide()
+            }
+        });
+
+        d.show();
+    }
+});

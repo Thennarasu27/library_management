@@ -1,0 +1,88 @@
+//get
+
+http://library.local/api/resource/Employee%20Management - get data %20 is space in url
+http://library.local/api/resource/Employee%20Management/7 - get data specific 
+http://library.local/api/resource/Employee%20Management?fields=[%22name1%22,%22email%22,%22department%22] - specific fields
+http://library.local/api/resource/Employee%20Management?filters=[[%22department%22,%22=%22,%22HR%22]] - get with filters
+http://library.local/api/resource/Employee%20Management?or_filters=[["department","=","HR"],["department","=","IT"]] - normal filter is and 
+http://library.local/api/resource/Employee%20Management?order_by=name1%20desc - get with order by
+http://library.local/api/resource/Employee%20Management?limit_start=3&limit_page_length=5
+
+
+
+//post
+{
+    "session_expired": 1,
+    "data": {
+        "name": 17,
+        "owner": "Administrator",
+        "creation": "2026-08-20 12:17:56.743580",
+        "modified": "2026-08-20 12:17:56.743580",
+        "modified_by": "Administrator",
+        "docstatus": 0,
+        "idx": 0,
+        "name1": "Ajith",
+        "email": "ajith@gmail.com",
+        "department": "IT",
+        "salary": 0.0,
+        "bonus": 0.0,
+        "total_salary": 0.0,
+        "experience": 0,
+        "active": 0,
+        "status": "pending",
+        "doctype": "Employee Management",
+        "table1": []
+    }
+}
+
+http://library.local/api/resource/Employee%20Management
+Authorization key
+token 3e3ef5e7d7483fe:d92d761cd85e6d4 value
+
+put
+http://library.local/api/resource/Employee%20Management/17
+{
+    "name1":"Ajith Kumar"
+}
+
+delete
+{
+    "session_expired": 1,
+    "data": "ok"
+}
+http://library.local/api/resource/Employee%20Management/14
+
+method call
+http://library.local/api/method/library_management.api.apicheck - in browser
+method post
+http://library.local/api/method/library_management.api.methodpost
+
+upload files 
+{
+    "session_expired": 1,
+    "message": {
+        "name": "d706b0a665",
+        "owner": "Administrator",
+        "creation": "2026-08-20 12:42:32.924235",
+        "modified": "2026-08-20 12:42:32.924235",
+        "modified_by": "Administrator",
+        "docstatus": 0,
+        "idx": 0,
+        "file_name": "1.png",
+        "is_private": 0,
+        "file_type": "PNG",
+        "is_home_folder": 0,
+        "is_attachments_folder": 0,
+        "file_size": 71465,
+        "file_url": "/files/1.png",
+        "folder": "Home",
+        "is_folder": 0,
+        "content_hash": "7fd3e1f625c307ce37cb78e50f034739",
+        "uploaded_to_dropbox": 0,
+        "uploaded_to_google_drive": 0,
+        "doctype": "File"
+    }
+}
+http://library.local/api/method/upload_file
+http://library.local/files/1.png
+//librry.local/public/files. 

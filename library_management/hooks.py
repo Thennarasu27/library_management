@@ -4,63 +4,62 @@ app_publisher = "Thennarasu M"
 app_description = "To manage library related activites."
 app_email = "thennarasum2705@gmail.com"
 app_license = "mit"
-# Apps
-# ------------------
-# required_apps = []
-# Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "library_management",
-# 		"logo": "/assets/library_management/logo.png",
-# 		"title": "Library-Tech",
-# 		"route": "/library_management",
-# 		"has_permission": "library_management.api.permission.has_app_permission"
-# 	}
-# ]
-# Includes in <head>
-# ------------------
-# include js, css files in header of desk.html
 
-#--------------------------------------------------------------------------------------#
-app_include_css = "/assets/library_management/css/library_management.css"
-app_include_js = "/assets/library_management/js/library_management.js"
+# # Apps
+# # ------------------
+# # required_apps = []
+# # Each item in the list will be shown as an app in the apps page
+# # add_to_apps_screen = [
+# # 	{
+# # 		"name": "library_management",
+# # 		"logo": "/assets/library_management/logo.png",
+# # 		"title": "Library-Tech",
+# # 		"route": "/library_management",
+# # 		"has_permission": "library_management.api.permission.has_app_permission"
+# # 	}
+# # ]
+# # Includes in <head>
+# # ------------------
+# # include js, css files in header of desk.html
 
-# include js, css files in header of web template
-web_include_css = "/assets/library_management/css/check.css"
-web_include_js = "/assets/library_management/js/check.js"
 
-# include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "library_management/public/scss/website"
+# #--------------------------------------------------------------------------------------#
+# app_include_css = "/assets/library_management/css/library_management.css"
+# app_include_js = "/assets/library_management/js/library_management.js"
+# # include js, css files in header of web template
+# web_include_css = "/assets/library_management/css/check.css"
+# web_include_js = "/assets/library_management/js/check.js"
+# # include custom scss in every website theme (without file extension ".scss")
+# # website_theme_scss = "library_management/public/scss/website"
+# # include js, css files in header of web form
+# webform_include_js = {"Employee Management": "public/js/webform.js"}
+# webform_include_css = {"Employee Management": "public/css/webform.css"}
 
-# include js, css files in header of web form
-webform_include_js = {"Employee Management": "public/js/webform.js"}
-webform_include_css = {"Employee Management": "public/css/webform.css"}
+# # include js in page
 
-# include js in page
+# page_js = {"page1" : "public/js/library_management.js"}
 
-page_js = {"page1" : "public/js/library_management.js"}
-
-#website-hooks
+# #website-hooks
 
 # website_catch_all="404.html"
 # website_path_resolver = "library_management.www.resolver.custom_resolver"
-#get_web_pages_with_dynamic_routes = "script.get_web_pages_with_dynamic_routes" #not working
-#website_clear_cache = "library_management.overrides.clear_website_cache"
-# website_route_rules = [
-#     {   #not working
-#         "from_route": "/Author/<name>",
-#         "to_route": "library_management/Author/Author"
-#     }
-# ]
-# website_redirects=[    #working
-#     {
-#         "source":"/deepak",
-#         "target":"/check"
-#     }
-# ]
-#home_page = "home"
-brand_html = '<div><img src="tennismart.png"> TennisMart</div>'
-base_template="library_management.templates.custom"
+# #get_web_pages_with_dynamic_routes = "script.get_web_pages_with_dynamic_routes" #not working
+# #website_clear_cache = "library_management.overrides.clear_website_cache"
+# # website_route_rules = [
+# #     {   #not working
+# #         "from_route": "/Author/<name>",
+# #         "to_route": "library_management/Author/Author"
+# #     }
+# # ]
+# # website_redirects=[    #working
+# #     {
+# #         "source":"/deepak",
+# #         "target":"/check"
+# #     }
+# # ]
+# #home_page = "home"
+# # brand_html = '<div><img src="tennismart.png"> TennisMart</div>'
+# # base_template="library_management.templates.custom"
 
 
 
@@ -70,244 +69,331 @@ base_template="library_management.templates.custom"
 
  
 
-#----------------------------------------------------------#
-# include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+# #----------------------------------------------------------#
+# # include js in doctype views
+# # doctype_js = {"doctype" : "public/js/doctype.js"}
+# # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+# # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
+# # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
-# Svg Icons
-# ------------------
-# include app icons in desk
-# app_include_icons = "library_management/public/icons.svg"
+# # Svg Icons
+# # ------------------
+# # include app icons in desk
+# # app_include_icons = "library_management/public/icons.svg"
 
-# Home Pages
-# ----------
+# # Home Pages
+# # ----------
 
-# application home page (will override Website Settings)
-#home_page = "check"
+# # application home page (will override Website Settings)
+# #home_page = "check"
 
-# website user home page (by Role)
-# role_home_page = {
-# 	"Role": "home_page"
+# # website user home page (by Role)
+# # role_home_page = {
+# # 	"Role": "home_page"
+# # }
+
+# # Generators
+# # ----------
+
+# # automatically create page for each record of this doctype
+# # website_generators = ["Web Page"]
+
+# # automatically load and sync documents of this doctype from downstream apps
+# # importable_doctypes = [doctype_1]
+
+# # Jinja
+# # ----------
+
+# # add methods and filters to jinja environment
+# # jinja = {
+# # 	"methods": "library_management.utils.jinja_methods",
+# # 	"filters": "library_management.utils.jinja_filters"
+# # }
+
+# # Installation
+# # ------------
+
+# # before_install = "library_management.install.before_install"
+# # after_install = "library_management.install.after_install"
+
+# # Uninstallation
+# # ------------
+
+# # before_uninstall = "library_management.uninstall.before_uninstall"
+# # after_uninstall = "library_management.uninstall.after_uninstall"
+
+# # Integration Setup
+# # ------------------
+# # To set up dependencies/integrations with other apps
+# # Name of the app being installed is passed as an argument
+
+# # before_app_install = "library_management.utils.before_app_install"
+# # after_app_install = "library_management.utils.after_app_install"
+
+# # Integration Cleanup
+# # -------------------
+# # To clean up dependencies/integrations with other apps
+# # Name of the app being uninstalled is passed as an argument
+
+# # before_app_uninstall = "library_management.utils.before_app_uninstall"
+# # after_app_uninstall = "library_management.utils.after_app_uninstall"
+
+# # Build
+# # ------------------
+# # To hook into the build process
+
+# after_build = "library_management.build.after_build"
+
+# # Desk Notifications
+# # ------------------
+# # See frappe.core.notifications.get_notification_config
+
+# # notification_config = "library_management.notifications.get_notification_config"
+
+# # Permissions
+# # -----------
+# # Permissions evaluated in scripted ways
+
+# # permission_query_conditions = {
+# # 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# # }
+# #
+# # has_permission = {
+# # 	"Event": "frappe.desk.doctype.event.event.has_permission",
+# # }
+
+# # Document Events
+# # ---------------
+# # Hook on document methods and events
+
+# # doc_events = {
+# # 	"*": {
+# # 		"on_update": "method",
+# # 		"on_cancel": "method",
+# # 		"on_trash": "method"
+# # 	}
+# # }
+
+# # Scheduled Tasks
+# # ---------------
+
+# # scheduler_events = {
+# # 	"all": [
+# # 		"library_management.tasks.all"
+# # 	],
+# # 	"daily": [
+# # 		"library_management.tasks.daily"
+# # 	],
+# # 	"hourly": [
+# # 		"library_management.tasks.hourly"
+# # 	],
+# # 	"weekly": [
+# # 		"library_management.tasks.weekly"
+# # 	],
+# # 	"monthly": [
+# # 		"library_management.tasks.monthly"
+# # 	],
+# # }
+
+# # Testing
+# # -------
+
+# # before_tests = "library_management.install.before_tests"
+
+# # Extend DocType Class
+# # ------------------------------
+# #
+# # Specify custom mixins to extend the standard doctype controller.
+# # extend_doctype_class = {
+# # 	"Task": "library_management.custom.task.CustomTaskMixin"
+# # }
+
+# # Overriding Methods
+# # ------------------------------
+# #
+# # override_whitelisted_methods = {
+# # 	"frappe.desk.doctype.event.event.get_events": "library_management.event.get_events"
+# # }
+# #
+# # each overriding function accepts a `data` argument;
+# # generated from the base implementation of the doctype dashboard,
+# # along with any modifications made in other Frappe apps
+# # override_doctype_dashboards = {
+# # 	"Task": "library_management.task.get_dashboard_data"
+# # }
+
+# # exempt linked doctypes from being automatically cancelled
+# #
+# # auto_cancel_exempted_doctypes = ["Auto Repeat"]
+
+# # Ignore links to specified DocTypes when deleting documents
+# # -----------------------------------------------------------
+
+# # ignore_links_on_delete = ["Communication", "ToDo"]
+
+# # Request Events
+# # ----------------
+# # before_request = ["library_management.utils.before_request"]
+# # after_request = ["library_management.utils.after_request"]
+
+# # Job Events
+# # ----------
+# # before_job = ["library_management.utils.before_job"]
+# # after_job = ["library_management.utils.after_job"]
+
+# # User Data Protection
+# # --------------------
+
+# # user_data_fields = [
+# # 	{
+# # 		"doctype": "{doctype_1}",
+# # 		"filter_by": "{filter_by}",
+# # 		"redact_fields": ["{field_1}", "{field_2}"],
+# # 		"partial": 1,
+# # 	},
+# # 	{
+# # 		"doctype": "{doctype_2}",
+# # 		"filter_by": "{filter_by}",
+# # 		"partial": 1,
+# # 	},
+# # 	{
+# # 		"doctype": "{doctype_3}",
+# # 		"strict": False,
+# # 	},
+# # 	{
+# # 		"doctype": "{doctype_4}"
+# # 	}
+# # ]
+
+# # Authentication and authorization
+# # --------------------------------
+
+# # auth_hooks = [
+# # 	"library_management.auth.validate"
+# # ]
+
+# # Automatically update python controller files with type annotations for this app.
+# export_python_type_annotations = True
+
+# # default_log_clearing_doctypes = {
+# # 	"Logging DocType Name": 30  # days to retain logs
+# # }
+
+# # Translation
+# # ------------
+# # List of apps whose translatable strings should be excluded from this app's translations.
+# # ignore_translatable_strings_from = []
+
+# test_string = "value"
+# test_list = ["value"]
+# test_dict = {
+#     "key": "value"
 # }
 
-# Generators
-# ----------
+# # doc_events = {
+# #     "Employee Management": {
+# #         "before_save": "library_management.events.before_save",
+# #         "after_insert": "library_management.events.after_insert"
+# #     }
+# # }
 
-# automatically create page for each record of this doctype
-# website_generators = ["Web Page"]
+# # app_include_js = "/assets/library_management/js/app.js"
+# # #app_include_css="/assets/library_management/css/app.css"
+# # web_include_js = "/assets/library_management/js/portal.js"
+# # webform_include_js = {"Employee Management":"public/js/form.js"}
+# # webform_include_css={"Employee Management":"public/css/"}
+# # page_js = {"employee" : "public/js/page.js"}
+# # # sounds = [
+# # #     {"name": "ping", "src": "/assets/app/sounds/ping.mp3", "volume": 0.2}
+# # #  ]
 
-# automatically load and sync documents of this doctype from downstream apps
-# importable_doctypes = [doctype_1]
+# # before_install = "library_management.setup.install.before_install"
+# # after_install = "library_management.setup.install.after_install"
+# # after_sync = "library_management.setup.install.after_sync"
+# before_write_file = "library_management.overrides.file.before_write"
+# write_file = "library_management.overrides.file.write_file"
+# # delete_file = "library_management.overrides.file.delete_file"
 
-# Jinja
-# ----------
+test_string = "Hello Frappe"
 
-# add methods and filters to jinja environment
-# jinja = {
-# 	"methods": "library_management.utils.jinja_methods",
-# 	"filters": "library_management.utils.jinja_filters"
-# }
+test_list = [
+    "Library",
+    "Management"
+]
 
-# Installation
-# ------------
-
-# before_install = "library_management.install.before_install"
-# after_install = "library_management.install.after_install"
-
-# Uninstallation
-# ------------
-
-# before_uninstall = "library_management.uninstall.before_uninstall"
-# after_uninstall = "library_management.uninstall.after_uninstall"
-
-# Integration Setup
-# ------------------
-# To set up dependencies/integrations with other apps
-# Name of the app being installed is passed as an argument
-
-# before_app_install = "library_management.utils.before_app_install"
-# after_app_install = "library_management.utils.after_app_install"
-
-# Integration Cleanup
-# -------------------
-# To clean up dependencies/integrations with other apps
-# Name of the app being uninstalled is passed as an argument
-
-# before_app_uninstall = "library_management.utils.before_app_uninstall"
-# after_app_uninstall = "library_management.utils.after_app_uninstall"
-
-# Build
-# ------------------
-# To hook into the build process
-
-after_build = "library_management.build.after_build"
-
-# Desk Notifications
-# ------------------
-# See frappe.core.notifications.get_notification_config
-
-# notification_config = "library_management.notifications.get_notification_config"
-
-# Permissions
-# -----------
-# Permissions evaluated in scripted ways
-
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
-
-# Document Events
-# ---------------
-# Hook on document methods and events
-
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
-
-# Scheduled Tasks
-# ---------------
-
-# scheduler_events = {
-# 	"all": [
-# 		"library_management.tasks.all"
-# 	],
-# 	"daily": [
-# 		"library_management.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"library_management.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"library_management.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"library_management.tasks.monthly"
-# 	],
-# }
-
-# Testing
-# -------
-
-# before_tests = "library_management.install.before_tests"
-
-# Extend DocType Class
-# ------------------------------
-#
-# Specify custom mixins to extend the standard doctype controller.
-# extend_doctype_class = {
-# 	"Task": "library_management.custom.task.CustomTaskMixin"
-# }
-
-# Overriding Methods
-# ------------------------------
-#
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "library_management.event.get_events"
-# }
-#
-# each overriding function accepts a `data` argument;
-# generated from the base implementation of the doctype dashboard,
-# along with any modifications made in other Frappe apps
-# override_doctype_dashboards = {
-# 	"Task": "library_management.task.get_dashboard_data"
-# }
-
-# exempt linked doctypes from being automatically cancelled
-#
-# auto_cancel_exempted_doctypes = ["Auto Repeat"]
-
-# Ignore links to specified DocTypes when deleting documents
-# -----------------------------------------------------------
-
-# ignore_links_on_delete = ["Communication", "ToDo"]
-
-# Request Events
-# ----------------
-# before_request = ["library_management.utils.before_request"]
-# after_request = ["library_management.utils.after_request"]
-
-# Job Events
-# ----------
-# before_job = ["library_management.utils.before_job"]
-# after_job = ["library_management.utils.after_job"]
-
-# User Data Protection
-# --------------------
-
-# user_data_fields = [
-# 	{
-# 		"doctype": "{doctype_1}",
-# 		"filter_by": "{filter_by}",
-# 		"redact_fields": ["{field_1}", "{field_2}"],
-# 		"partial": 1,
-# 	},
-# 	{
-# 		"doctype": "{doctype_2}",
-# 		"filter_by": "{filter_by}",
-# 		"partial": 1,
-# 	},
-# 	{
-# 		"doctype": "{doctype_3}",
-# 		"strict": False,
-# 	},
-# 	{
-# 		"doctype": "{doctype_4}"
-# 	}
-# ]
-
-# Authentication and authorization
-# --------------------------------
-
-# auth_hooks = [
-# 	"library_management.auth.validate"
-# ]
-
-# Automatically update python controller files with type annotations for this app.
-export_python_type_annotations = True
-
-# default_log_clearing_doctypes = {
-# 	"Logging DocType Name": 30  # days to retain logs
-# }
-
-# Translation
-# ------------
-# List of apps whose translatable strings should be excluded from this app's translations.
-# ignore_translatable_strings_from = []
-
-test_string = "value"
-test_list = ["value"]
 test_dict = {
-    "key": "value"
+    "app": "library_management",
+    "type": "test"
 }
 
-# doc_events = {
-#     "Employee Management": {
-#         "before_save": "library_management.events.before_save",
-#         "after_insert": "library_management.events.after_insert"
-#     }
+
+#hooks - freshly started
+
+# ============================================================
+# HOOKS PRACTICE - LIBRARY MANAGEMENT
+# ============================================================
+# app_logo_url = "/assets/library_management/images/logo.png"
+app_include_js = [
+    "/assets/library_management/js/custom.js"
+]
+# app_include_css = [
+#     "/assets/library_management/css/custom.css"
+# ]
+
+web_include_js = [
+    "/assets/library_management/js/web.js"
+]
+# web_include_css = [
+#     "/assets/library_management/css/web.css"
+# ]
+
+webform_include_js = {
+    "Employee Management": "public/js/employee_management.js"
+}
+# webform_include_css = {
+#     "Employee Management": "public/css/employee_management.css"
 # }
 
-# app_include_js = "/assets/library_management/js/app.js"
-# #app_include_css="/assets/library_management/css/app.css"
-# web_include_js = "/assets/library_management/js/portal.js"
-# webform_include_js = {"Employee Management":"public/js/form.js"}
-# webform_include_css={"Employee Management":"public/css/"}
-# page_js = {"employee" : "public/js/page.js"}
-# # sounds = [
-# #     {"name": "ping", "src": "/assets/app/sounds/ping.mp3", "volume": 0.2}
-# #  ]
+page_js = {
+    "chart_test": "public/js/page.js"
+}
 
-# before_install = "library_management.setup.install.before_install"
-# after_install = "library_management.setup.install.after_install"
-# after_sync = "library_management.setup.install.after_sync"
+sounds = [
+    {
+        "name": "ping",
+        "src": "/assets/library_management/sounds/ping.mp3",
+        "volume": 0.2
+    }
+]
+
+
+before_install = "library_management.setup.install.before_install"
+after_install = "library_management.setup.install.after_install"
+after_sync = "library_management.setup.install.after_sync"
+
+
+
+before_uninstall = "library_management.setup.uninstall.before_uninstall"
+after_uninstall = "library_management.setup.uninstall.after_uninstall"
+
+
+
+before_migrate = "library_management.migrate.before_migrate"
+after_migrate = "library_management.migrate.after_migrate"
+
+
+
+after_build = "library_management.build.after_build"
+#after_app_build = "library_management.build.after_app_build"
+before_tests = "library_management.test.before_tests"
+
+#file hooks
+#file hooks allows us to change the default behaviour
+# write function in overrides
+before_write_file = "library_management.overrides.file.before_write_file"
+# write_file = "library_management.overrides.file.write_file"
+# delete_file_data_content = "library_management.overrides.file.delete_file"
+
+
+
+

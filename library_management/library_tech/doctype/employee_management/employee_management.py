@@ -57,6 +57,7 @@ class EmployeeManagement(Document):
 		from library_management.library_tech.doctype.projectsemp.projectsemp import Projectsemp
 
 		active: DF.Check
+		attach: DF.Attach | None
 		bonus: DF.Currency
 		department: DF.Literal["HR", "IT", "SALES", "FINANCE"]
 		designation: DF.Data | None
@@ -70,6 +71,7 @@ class EmployeeManagement(Document):
 		name: DF.Int | None
 		phone: DF.Phone | None
 		salary: DF.Currency
+		status: DF.Literal["pending", "approved"]
 		table1: DF.Table[Projectsemp]
 		total_salary: DF.Currency
 	# end: auto-generated types

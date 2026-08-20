@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frappe Jinja API Test</title>
+</head>
+<body>
+    <h1>Frappe Jinja API Test</h1>
+    <hr>
+    <h2>format</h2>
+    <p>
+        Formatted Date:
+        {{ frappe.format('2019-09-08', {'fieldtype': 'Date'}) }}
+    </p>
+    <h2>format_date</h2>
+    <p>
+        Human Readable Date:
+        {{ frappe.format_date('2019-09-08') }}
+    </p>
+    <h2>get_url</h2>
+    <p>
+        Site URL:
+        {{ frappe.get_url() }}
+    </p>
+    <h2>get_doc</h2>
+    {% set doc = frappe.get_doc('Employee Management', '7') %}
+    <p>
+        Employee Name:
+        {{ doc.name1 }}
+    </p>
+    <h2>get_all</h2>
+    {% set employees = frappe.get_all(
+        'Employee Management',
+        fields=['name', 'name1'],
+        order_by='name asc'
+    ) %}
+    {% for employee in employees %}
+        <p>
+            ID: {{ employee.name }} -
+            Name: {{ employee.name1 }}
+        </p>
+    {% endfor %}
+    <!-- get all - no user permission applied , get list applies -->
+    <h2>get_list</h2>
+    {% set employee_list = frappe.get_list(
+        'Employee Management',
+        fields=['name', 'name1'],
+        order_by='name asc'
+    ) %}
+    {% for employee in employee_list %}
+        <p>
+            {{ employee.name }} - {{ employee.name1 }}
+        </p>
+    {% endfor %}
+    <h2>db.get_value</h2>
+    {% set employee_name = frappe.db.get_value(
+        'Employee Management',
+        '7',
+        'name1'
+    ) %}
+    <p>
+        Employee Name:
+        {{ employee_name }}
+    </p>
+    <h2>get_single_value</h2>
+    {% set timezone = frappe.db.get_single_value(
+        'System Settings',
+        'time_zone'
+    ) %}
+    <p>
+        Time Zone:
+        {{ timezone }}
+    </p>
+    <h2>get_system_settings</h2>
+    {% set country = frappe.get_system_settings('country') %}
+    <p>
+        Country:
+        {{ country }}
+    </p>
+    <h2>get_meta</h2>
+    {% set meta = frappe.get_meta('Employee Management') %}
+    <p>
+        Number of Fields:
+        {{ meta.fields | len }}
+    </p>
+    <h2>get_fullname</h2>
+    <p>
+        {{ frappe.get_fullname() }}
+    </p>
+    <h2>render_template</h2>
+    <p>
+        {{ frappe.render_template(
+            '{{ a }}',
+            {'a': 'Hello from render_template'}
+        ) }}
+    </p>
+    <h2>frappe._</h2>
+    <p>
+        <!-- does according to user language  -->
+        {{ _('This string should get translated') }}
+    </p>
+    <h2>session.user</h2>
+    <p>
+        {{ frappe.session.user }}
+    </p>
+    <h2>session.csrf_token</h2>
+    <p>
+        {{ frappe.session.csrf_token }}
+    </p>
+    <h2>form_dict</h2>
+    <p>
+        {{ frappe.form_dict }}
+    </p>
+    <h2>17. frappe.lang</h2>
+    <p>
+        Language:
+        {{ frappe.lang }}
+    </p>
+</body>
+</html>
